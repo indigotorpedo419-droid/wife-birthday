@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Kafayat ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:linear-gradient(135deg,#000,#111,#1a1a1a);
+overflow-x:hidden;
+min-height:100vh;
+color:white;
+}
+
+/* GOLD PARTICLES */
+body::before{
+content:"";
+position:fixed;
+inset:0;
+background:
+radial-gradient(circle at 20% 20%,rgba(255,215,0,.15),transparent 25%),
+radial-gradient(circle at 80% 30%,rgba(255,215,0,.12),transparent 25%),
+radial-gradient(circle at 50% 80%,rgba(255,215,0,.12),transparent 25%);
+pointer-events:none;
+}
+
+/* BALLOONS */
+
+.balloon{
+position:fixed;
+bottom:-150px;
+font-size:50px;
+animation:floatUp linear infinite;
+opacity:.9;
+z-index:1;
+}
+
+@keyframes floatUp{
+0%{
+transform:translateY(0);
+}
+100%{
+transform:translateY(-130vh);
+}
+}
+
+/* CONTAINER */
+
+.container{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+position:relative;
+z-index:2;
+}
+
+.card{
+width:100%;
+max-width:900px;
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,215,0,.35);
+backdrop-filter:blur(12px);
+border-radius:30px;
+padding:30px;
+text-align:center;
+box-shadow:
+0 0 20px rgba(255,215,0,.2),
+0 0 60px rgba(255,215,0,.1);
+}
+
+/* COUNTDOWN */
+
+#countdownScreen{
+display:block;
+}
+
+.count{
+font-size:7rem;
+font-weight:bold;
+color:#FFD700;
+text-shadow:0 0 25px gold;
+font-family:'Cinzel',serif;
+}
+
+.countText{
+font-size:1.3rem;
+margin-top:15px;
+color:#f5d77d;
+}
+
+/* MAIN CONTENT */
+
+#birthdayContent{
+display:none;
+animation:fadeIn 2s ease;
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+h1{
+font-family:'Great Vibes',cursive;
+font-size:5rem;
+color:#FFD700;
+text-shadow:0 0 20px rgba(255,215,0,.7);
+}
+
+.subtitle{
+font-family:'Cinzel',serif;
+margin-top:10px;
+font-size:1.2rem;
+color:#f8df87;
+}
+
+.crown{
+font-size:70px;
+margin-bottom:15px;
+}
+
+.message{
+margin-top:25px;
+padding:25px;
+background:rgba(255,215,0,.08);
+border-radius:20px;
+line-height:1.9;
+font-size:1.05rem;
+}
+
+.signature{
+margin-top:25px;
+font-family:'Great Vibes',cursive;
+font-size:2.5rem;
+color:#FFD700;
+}
+
+.love-btn{
+margin-top:25px;
+padding:15px 30px;
+border:none;
+border-radius:50px;
+background:#FFD700;
+color:black;
+font-weight:bold;
+cursor:pointer;
+font-size:1rem;
+transition:.3s;
+}
+
+.love-btn:hover{
+transform:scale(1.08);
+}
+
+#extraLove{
+display:none;
+margin-top:20px;
+font-size:1.2rem;
+color:#ffe68a;
+animation:fadeIn 1s;
+}
+
+/* CONFETTI */
+
+.confetti{
+position:fixed;
+width:10px;
+height:10px;
+top:-10px;
+animation:fall linear forwards;
+}
+
+@keyframes fall{
+to{
+transform:translateY(110vh) rotate(720deg);
+}
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+h1{
+font-size:3.2rem;
+}
+
+.count{
+font-size:5rem;
+}
+
+.message{
+font-size:.95rem;
+}
+
+.signature{
+font-size:2rem;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<div class="card">
+
+<!-- COUNTDOWN -->
+
+<div id="countdownScreen">
+
+<div class="count" id="count">10</div>
+
+<div class="countText">
+A Special Surprise Is Coming For My Queen ❤️
+</div>
+
+</div>
+
+<!-- BIRTHDAY CONTENT -->
+
+<div id="birthdayContent">
+
+<div class="crown">👑</div>
+
+<h1>Happy Birthday Kafayat</h1>
+
+<div class="subtitle">
+My Wife • My Queen • My Forever Love
+</div>
+
+<div class="message">
+
+My Dearest Kafayat,
+
+Today I celebrate the most beautiful woman in my life.
+
+You are my greatest blessing, my happiness, my peace, and the love of my heart.
+
+Thank you for your endless love, unwavering loyalty, trust, kindness, and support. Every day with you is a gift that I cherish deeply.
+
+You inspire me to be better, love harder, and dream bigger.
+
+On your special day, I pray that your life overflows with joy, success, good health, laughter, and countless beautiful memories.
+
+No matter how many birthdays come and go, my love for you will only grow stronger.
+
+You are my today, my tomorrow, and my forever.
+
+Happy Birthday, My Queen.
+
+❤️ I Love You Always ❤️
+
+</div>
+
+<div class="signature">
+Forever Yours,<br>
+Steven ❤️
+</div>
+
+<button class="love-btn" onclick="showLove()">
+💌 Open My Heart
+</button>
+
+<div id="extraLove">
+💕 Kafayat, thank you for making my world beautiful. I would choose you in every lifetime, every story, and every future. 💕
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+/* FLOATING BALLOONS */
+
+const balloons=["🎈","🎈","🎈","🎉","✨","💖"];
+
+for(let i=0;i<35;i++){
+
+let b=document.createElement("div");
+
+b.className="balloon";
+
+b.innerHTML=balloons[Math.floor(Math.random()*balloons.length)];
+
+b.style.left=Math.random()*100+"vw";
+
+b.style.animationDuration=(8+Math.random()*10)+"s";
+
+b.style.fontSize=(30+Math.random()*35)+"px";
+
+document.body.appendChild(b);
+}
+
+/* COUNTDOWN */
+
+let time=10;
+
+const count=document.getElementById("count");
+
+const countdown=setInterval(()=>{
+
+time--;
+
+count.innerText=time;
+
+if(time<=0){
+
+clearInterval(countdown);
+
+document.getElementById("countdownScreen").style.display="none";
+
+document.getElementById("birthdayContent").style.display="block";
+
+launchConfetti();
+
+}
+
+},1000);
+
+/* LOVE BUTTON */
+
+function showLove(){
+
+document.getElementById("extraLove").style.display="block";
+
+}
+
+/* CONFETTI */
+
+function launchConfetti(){
+
+for(let i=0;i<250;i++){
+
+let c=document.createElement("div");
+
+c.className="confetti";
+
+c.style.left=Math.random()*100+"vw";
+
+c.style.background=[
+"#FFD700",
+"#FFF8DC",
+"#FFC107",
+"#FFFFFF"
+][Math.floor(Math.random()*4)];
+
+c.style.animationDuration=
+(3+Math.random()*4)+"s";
+
+document.body.appendChild(c);
+
+setTimeout(()=>{
+c.remove();
+},7000);
+}
+
+}
+
+</script>
+
+</body>
+</html>
